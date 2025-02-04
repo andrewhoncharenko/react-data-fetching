@@ -4,6 +4,8 @@ export function fetchAvailablePlaces() {
             throw new Error("Failed to fetch places");
         }
         return response.json();
+    }).then((placesData) => {
+        return placesData.places;
     });
 };
 
@@ -13,6 +15,8 @@ export function fetchUserPlaces() {
             throw new Error("Failed to fetch user places");
         }
         return response.json();
+    }).then((placesData) => {
+        return placesData.places;
     });
 };
 
